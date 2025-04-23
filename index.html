@@ -3,27 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resume - Shivshankar Awate</title>
+  <title>Shivshankar Awate - Resume</title>
   <style>
+    :root {
+      --bg-color: #0d0d0d;
+      --accent-color: #00e0ff;
+      --text-color: #e0e0e0;
+      --card-bg: #1a1a1a;
+      --border-glow: 0 0 10px var(--accent-color);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 2rem;
+      line-height: 1.6;
     }
+
     h1, h2 {
-      color: #005792;
+      color: var(--accent-color);
+      text-shadow: 0 0 10px var(--accent-color);
     }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
     section {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
       margin-bottom: 2rem;
+      border-left: 4px solid var(--accent-color);
+      border-radius: 12px;
+      box-shadow: var(--border-glow);
+      transition: transform 0.3s ease;
     }
-    .contact a {
-      color: #005792;
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    a {
+      color: var(--accent-color);
       text-decoration: none;
     }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     ul {
-      list-style: disc;
-      margin-left: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tag {
+      background-color: #00e0ff22;
+      color: var(--accent-color);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      margin-right: 0.5rem;
+      display: inline-block;
+      font-size: 0.85rem;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: var(--accent-color);
     }
   </style>
 </head>
@@ -31,59 +96,59 @@
 
   <h1>Shivshankar Awate</h1>
 
-  <section class="profile">
+  <section>
     <h2>Profile</h2>
-    <p>I am motivated to join a well-organized company where I can learn new skills and jump into real-time projects. I am confident in my creativity and innovation and seek to continually upgrade my skills.</p>
+    <p>I am motivated to join a well-organized company where I can learn new skills and jump into real-time projects. I am confident in my <span class="highlight">creativity</span> and <span class="highlight">innovation</span> and seek to continually upgrade my skills.</p>
   </section>
 
-  <section class="contact">
+  <section>
     <h2>Contact</h2>
-    <p><strong>Phone:</strong> +91 9353097661</p>
-    <p><strong>Email:</strong> <a href="mailto:shivashankarawate@gmail.com">shivashankarawate@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rohan-rajoli-1237a32a5" target="_blank">rohan-rajoli-1237a32a5</a></p>
+    <div class="grid">
+      <div><strong>Phone:</strong> +91 9353097661</div>
+      <div><strong>Email:</strong> <a href="mailto:shivashankarawate@gmail.com">shivashankarawate@gmail.com</a></div>
+      <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rohan-rajoli-1237a32a5" target="_blank">rohan-rajoli-1237a32a5</a></div>
+    </div>
   </section>
 
-  <section class="skills">
+  <section>
     <h2>Skills</h2>
     <ul>
-      <li><strong>Languages Known:</strong> English, Kannada, Hindi</li>
-      <li><strong>Frontend Development:</strong> HTML, CSS</li>
-      <li><strong>Backend Development:</strong> PHP, MySQL (Basic)</li>
-      <li><strong>Database Management:</strong> MySQL (Basic), MongoDB (Basic)</li>
-      <li><strong>Tools & Frameworks:</strong> XAMPP</li>
-      <li><strong>Additional Skills:</strong> Team Collaboration, Communication, Adaptability, Punctuality</li>
+      <li><span class="tag">Languages:</span> English, Kannada, Hindi</li>
+      <li><span class="tag">Frontend:</span> HTML, CSS</li>
+      <li><span class="tag">Backend:</span> PHP, MySQL (Basic)</li>
+      <li><span class="tag">Database:</span> MySQL (Basic), MongoDB (Basic)</li>
+      <li><span class="tag">Tools:</span> XAMPP</li>
+      <li><span class="tag">Soft Skills:</span> Collaboration, Communication, Adaptability, Punctuality</li>
     </ul>
   </section>
 
-  <section class="education">
+  <section>
     <h2>Education</h2>
     <ul>
-      <li><strong>PES Institute of Technology and Management, Shivamogga</strong><br/>
-          Present: 5th Semester | 4th Semester GPA: 7.6</li>
-      <li><strong>KLE Independent PU College, Nipani, Belagavi</strong><br/>
-          Passing Year: 2022 | GPA: 84.66%</li>
-      <li><strong>Kannada Medium High School, Akkol, Belagavi</strong><br/>
-          Passing Year: 2020 | GPA: 83.52%</li>
+      <li><strong>PES Institute of Technology and Management, Shivamogga</strong> — 5th Sem (GPA: 7.6)</li>
+      <li><strong>KLE Independent PU College, Nipani</strong> — 2022 (GPA: 84.66%)</li>
+      <li><strong>Kannada Medium High School, Akkol</strong> — 2020 (GPA: 83.52%)</li>
     </ul>
   </section>
 
-  <section class="certifications">
+  <section>
     <h2>Certifications</h2>
     <ul>
-      <li>Completed 3-day Student Development Program on “Code Craft: Mastering Competitive Programming for the IT Arena” (4th - 6th July 2024) at PESITM</li>
-      <li>Completed 3-day Student Development Program on “Enterprise App Development with Java EE” (2nd - 4th February 2024) at PESITM</li>
-      <li>Completed 2-day Program on “Building Intelligent Systems: Hands-on Session on Data Science” (22nd - 23rd October 2024)</li>
-      <li>Successfully completed NPTEL Certificate on Cyber Security (16th November 2024)</li>
+      <li>“<strong>Code Craft</strong>: Mastering Competitive Programming” — 3 Days @ PESITM (Jul 2024)</li>
+      <li>“<strong>Enterprise App Dev with Java EE</strong>” — 3 Days @ PESITM (Feb 2024)</li>
+      <li>“<strong>Data Science Hands-on</strong>” — 2 Days @ PESITM (Oct 2024)</li>
+      <li><strong>Cyber Security</strong> — NPTEL Certified (Nov 2024)</li>
     </ul>
   </section>
 
-  <section class="projects">
+  <section>
     <h2>Projects</h2>
     <ul>
-      <li><strong>Mini Project:</strong> Bank Management System — Developed in a group of 2 using VS Code and XAMPP</li>
-      <li><strong>Mini Project:</strong> Revolutionizing Online Learning Platform — Created a website called "Class Net" in a group of 4</li>
+      <li><strong>Bank Management System</strong> — Group of 2, developed with VS Code & XAMPP</li>
+      <li><strong>Class Net</strong> — Online Learning Platform built by a team of 4</li>
     </ul>
   </section>
 
 </body>
 </html>
+
